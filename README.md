@@ -14,13 +14,19 @@ INSTALLATION
     sudo pip3 install tinysegmenter
     sudo pip3 install pykakasi
 
-2) Copy file AutoFurigana.py to folder 
+2) Correct error in tinysegmenter concerning Python 3. Change
+
+    from  print ' | '.join(segmenter.tokenize(u"私の名前は中野です"))
+
+    to    print(' | '.join(segmenter.tokenize(u"私の名前は中野です")))
+
+3) Copy file AutoFurigana.py to folder 
 
     ~/.config/libreoffice/4/user/Scripts/python/AutoFurigana.py
 
-3) Mark text segment to which furigana should be added.
+4) Mark text segment to which furigana should be added.
 
-4) Execute macro "add_furigana_to_selection" in OpenOffice/LibreOffice.
+5) Execute macro "add_furigana_to_selection" in OpenOffice/LibreOffice.
 
 
 REQUIREMENTS
